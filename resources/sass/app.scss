@@ -7,8 +7,13 @@
 
 body {
     background-color: yellow;
+
+    header {
+        background-color: aqua;
+    }
 }
 
-header {
-    background-color: aqua;
+.container-centered {
+    max-width: 1000px;
+    margin: 0 auto;
 }

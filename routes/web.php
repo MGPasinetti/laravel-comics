@@ -19,11 +19,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function() {
    return view('pages.home');
-});
+})->name('home');
 
 Route::get('/about', function() {
    return view('pages.contact');
-});
+})->name('contact');
 
 /*
 Create un nuovo progetto Laravel, su cui lavoreremo sia oggi che domani.
