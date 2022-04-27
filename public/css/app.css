@@ -1,3 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-color: yellow;
+  background-color: yellow;
+}
+body header {
+  background-color: aqua;
+}
+
+.container-centered {
+  max-width: 1000px;
+  margin: 0 auto;
 }
