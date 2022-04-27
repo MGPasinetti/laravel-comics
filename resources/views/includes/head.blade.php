@@ -6,6 +6,7 @@
 
 <title>@yield('title')</title>
 
+{{-- style --}}
 <link rel="stylesheet" href="css/app.css">
 
 

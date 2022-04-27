@@ -1,19 +1,30 @@
 //
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url(partials/_general.scss);
+@import url(partials/_mixins.scss);
+@import url(partials/_reset.scss);
+@import url(partials/_variables.scss);
 
 body {
     background-color: yellow;
 
     header {
         background-color: aqua;
+
+        .dc-sites {
+            height: 1.5rem;
+            background-color: #0282F9;
+            color: white;
+            font-size: 10px;
+
+            .container-centered {
+                height: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 3rem;
+            }
+
+        }
     }
 }
 
-.container-centered {
-    max-width: 1000px;
-    margin: 0 auto;
-}

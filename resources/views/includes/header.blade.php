@@ -1,7 +1,15 @@
 
 <header>
-    <div class="container-centered">
+    <div class="dc-sites">
+        <div class="container-centered">
+            <span>
+                DC POWER&trade; VISA&reg;
+            </span>
 
+            <span>
+                ADDITIONAL DC SITES &nabla;
+            </span>
+        </div>
     </div>
 
     <div class="navbar">
