@@ -1,1 +1,4 @@
-<div id="copyright text-right">© Copyright 2017 Saquib Rizwan </div>
+<footer>
+    © Copyright 2017 Saquib Rizwan
+</footer>
+
