@@ -25,6 +25,10 @@ Route::get('/about', function() {
    return view('pages.contact');
 })->name('contact');
 
+Route::get('/about', function() {
+    return view('pages.contact');
+ })->name('contact');
+
 /*
 Create un nuovo progetto Laravel, su cui lavoreremo sia oggi che domani.
 Oggi concentratevi sul layout: create un file di layout in cui inserire la struttura comune di tutte le pagine del sito web (tag head, tag body, ...) eventualmente includendo header e footer tramite due partials.
