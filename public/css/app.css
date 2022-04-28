@@ -5,6 +5,9 @@
     display: flex;
 }
 
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -17,9 +20,6 @@ html {
 }
 body {
   background-color: yellow;
-}
-body header {
-  background-color: aqua;
 }
 body header .dc-sites {
   height: 1.5rem;
@@ -43,14 +43,47 @@ body header .logo-nav-search .container-centered {
 body header .logo-nav-search .container-centered img {
   height: 4rem;
 }
+body header .logo-nav-search .container-centered nav {
+  height: 100%;
+}
 body header .logo-nav-search .container-centered nav ul {
   display: flex;
   list-style: none;
   gap: 1.5rem;
+  height: 100%;
+  align-items: center;
 }
-body header .logo-nav-search .container-centered nav ul a {
+body header .logo-nav-search .container-centered nav ul li {
+  height: 100%;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
+}
+body header .logo-nav-search .container-centered nav ul li a {
+  display: inline-block;
+  line-height: 80px;
+  vertical-align: middle;
   text-decoration: none;
-  color: rgb(96, 95, 95);
+  color: #605f5f;
   font-size: 12px;
   font-weight: 600;
+}
+body header .logo-nav-search .container-centered nav ul li.active a {
+  color: #0282F9;
+}
+body header .logo-nav-search .container-centered nav ul li.active {
+  border-bottom: 3px solid #0282F9;
+}
+body header .logo-nav-search .container-centered .searchbar {
+  border-bottom: 1px solid #0282F9;
+}
+body header .logo-nav-search .container-centered .searchbar input {
+  width: 5rem;
+  border: none;
+  text-align: end;
+  color: #080808;
+  font-weight: 700;
+  font-size: 12px;
+}
+body header .logo-nav-search .container-centered .searchbar i {
+  color: #605f5f;
 }

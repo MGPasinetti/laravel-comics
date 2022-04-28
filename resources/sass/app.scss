@@ -8,8 +8,6 @@ body {
     background-color: yellow;
 
     header {
-        background-color: aqua;
-
         .dc-sites {
             height: 1.5rem;
             background-color: #0282F9;
@@ -37,17 +35,55 @@ body {
                 }
 
                 nav {
+                    height: 100%;
+
                     ul {
                         display: flex;
                         list-style: none;
                         gap: 1.5rem;
+                        height: 100%;
+                        align-items: center;
 
-                        a {
-                            text-decoration: none;
-                            color: rgb(96, 95, 95);
-                            font-size: 12px;
-                            font-weight: 600;
+                        li {
+                            height: 100%;
+                            border-bottom: 3px solid transparent;
+                            border-top: 3px solid transparent;
+
+                            a {
+                                display: inline-block;
+                                line-height: 80px;
+                                vertical-align: middle;
+                                text-decoration: none;
+                                color: #605f5f;
+                                font-size: 12px;
+                                font-weight: 600;
+                            }
+
+                            &.active a {
+                                color: #0282F9;
+                            }
+                            &.active {
+                                border-bottom: 3px solid #0282F9;
+                            }
                         }
+
+                    }
+                }
+
+                .searchbar {
+                    border-bottom: 1px solid #0282F9;
+
+                    input {
+                        width: 5rem;
+                        border: none;
+                        text-align: end;
+                        color: #080808;
+                        font-weight: 700;
+                        font-size: 12px;
+                    }
+
+                    i {
+                        color: #605f5f;
                     }
                 }
             }
