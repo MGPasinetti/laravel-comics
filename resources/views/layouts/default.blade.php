@@ -6,15 +6,12 @@
     </head>
 
     <body>
-        <div class="container">
+        @include('includes.header')
 
-            @include('includes.header')
+        <main>
+            @yield('content')
+        </main>
 
-            <main>
-                @yield('content')
-            </main>
-
-            @include('includes.footer')
-        </div>
+        @include('includes.footer')
     </body>
 </html>

@@ -1,7 +1,10 @@
 .container-centered {
     max-width: 1000px;
+    height: 100%;
     margin: 0 auto;
+    display: flex;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -25,9 +28,29 @@ body header .dc-sites {
   font-size: 10px;
 }
 body header .dc-sites .container-centered {
-  height: 100%;
-  display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 3rem;
+}
+body header .logo-nav-search {
+  height: 5rem;
+  background-color: white;
+}
+body header .logo-nav-search .container-centered {
+  justify-content: space-between;
+  align-items: center;
+}
+body header .logo-nav-search .container-centered img {
+  height: 4rem;
+}
+body header .logo-nav-search .container-centered nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+body header .logo-nav-search .container-centered nav ul a {
+  text-decoration: none;
+  color: rgb(96, 95, 95);
+  font-size: 12px;
+  font-weight: 600;
 }

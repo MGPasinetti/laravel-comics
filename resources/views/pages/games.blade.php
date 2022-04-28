@@ -1,7 +1,5 @@
 @extends('layouts.default')
 
-@section('title', 'Comics')
-
 @section('content')
-   i am the home page
+   i am the games page
 @stop
