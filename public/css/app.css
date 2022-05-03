@@ -3,11 +3,35 @@
     height: 100%;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
+}
+
+.img-hero {
+    width: 100%;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
 }
 
 
 
+@mixin flex-layout($justify, $align, $wrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
 
+@mixin img-layout($width, $heigth, $object-fit, $object-position) {
+    width: $width;
+    height: $heigth;
+    -o-object-fit: $object-fit;
+       object-fit: $object-fit;
+    -o-object-position: $object-position;
+       object-position: $object-position;
+}
 * {
     margin: 0;
     padding: 0;
@@ -17,9 +41,6 @@
 html {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
-}
-body {
-  background-color: yellow;
 }
 body header .dc-sites {
   height: 1.5rem;
@@ -81,9 +102,187 @@ body header .logo-nav-search .container-centered .searchbar input {
   border: none;
   text-align: end;
   color: #080808;
-  font-weight: 700;
   font-size: 12px;
 }
 body header .logo-nav-search .container-centered .searchbar i {
   color: #605f5f;
+}
+body main {
+  background-color: black;
+}
+body main .title-section {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #0282F9;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+  top: -2rem;
+}
+body main .grid-series {
+  width: 100%;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+}
+body main .grid-series .card-serie {
+  width: calc((100% - 5rem) / 6);
+  margin-bottom: 1.5rem;
+}
+body main .grid-series .card-serie a {
+  text-decoration: none;
+  color: white;
+}
+body main .grid-series .card-serie a img {
+  width: 100%;
+  height: 148px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+body main .grid-series .card-serie a h5 {
+  margin-top: 1rem;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+body main button {
+  color: white;
+  border: none;
+  background-color: #0282F9;
+  padding: 0.5rem 3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 1rem auto;
+  cursor: pointer;
+}
+body main .dc-buy {
+  width: 100%;
+  height: 6rem;
+  background-color: #0282F9;
+  display: flex;
+  align-items: center;
+}
+body main .dc-buy ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 3.5rem;
+}
+body main .dc-buy ul li {
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+body main .dc-buy ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+body main .dc-buy ul li a img {
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+body section .bkg-blue {
+  margin-top: -0.5rem;
+  width: 100%;
+  height: 3.5rem;
+  background-color: #0282F9;
+}
+body section .bkg-blue img {
+  width: 8rem;
+  border: 1px solid white;
+  position: relative;
+  top: -9.5rem;
+}
+body footer .links-sec {
+  width: 100%;
+  height: 345px;
+  background-image: url("/images/footer-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body footer .links-sec .container-centered {
+  display: flex;
+}
+body footer .links-sec .container-centered .col-left {
+  width: 55%;
+  padding: 1.5rem 0;
+}
+body footer .links-sec .container-centered .col-left .nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+body footer .links-sec .container-centered .col-left .nav-links div ul {
+  margin-bottom: 1rem;
+}
+body footer .links-sec .container-centered .col-left .nav-links ul {
+  list-style: none;
+  line-height: 1.2;
+}
+body footer .links-sec .container-centered .col-left .nav-links ul a {
+  text-decoration: none;
+  color: #605f5f;
+  font-size: 12px;
+}
+body footer .links-sec .container-centered .col-left .nav-links ul h4 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+body footer .links-sec .container-centered .col-left p {
+  font-size: 12px;
+  color: #605f5f;
+}
+body footer .links-sec .container-centered .col-left p a {
+  text-decoration: none;
+  color: #0282F9;
+}
+body footer .links-sec .container-centered img {
+  width: 45%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+body footer .social-sec {
+  width: 100%;
+  padding: 1.5rem 0;
+  background-color: #303030;
+}
+body footer .social-sec .container-centered {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body footer .social-sec .container-centered button {
+  background-color: #303030;
+  color: white;
+  border: 1px solid #0282F9;
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+}
+body footer .social-sec .container-centered .social {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+body footer .social-sec .container-centered .social h4 {
+  color: #0282F9;
+}
+body footer .social-sec .container-centered .social img {
+  width: 1.5rem;
 }
